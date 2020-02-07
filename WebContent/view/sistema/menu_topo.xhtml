@@ -1,0 +1,56 @@
+
+<div xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
+	<h:form>
+		<p:menubar>
+			<p:menuitem icon="ui-icon-home" value="Início" action="#{loginController.init()}" ></p:menuitem>
+			<p:submenu label="Site"  icon="ui-icon-gear" rendered="#{menuTopoController.verificaPermissoes('ADMINISTRADOR')}">
+				<p:menuitem value="Notícia" action="#{noticiaController.init()}" icon="ui-icon ui-icon-volume-on" />
+				<p:menuitem value="Jorna A Caravana" action="#{jornalController.init()}"  icon="ui-icon ui-icon-image" />
+				<p:menuitem value="Atividades" action="#{atividadeController.init()}" icon="ui-icon ui-icon-volume-on" />
+				
+				
+			</p:submenu>
+			<p:submenu label="Livraria" icon="ui-icon-document">
+				<p:submenu label="New" icon="ui-icon-contact">
+					<p:menuitem value="Project" url="#" />
+					<p:menuitem value="Other" url="#" />
+				</p:submenu>
+				<p:menuitem value="Open" url="#" />
+				<p:separator />
+				<p:menuitem value="Quit" url="#" />
+			</p:submenu>
+
+			<p:submenu label="Biblioteca" icon="ui-icon-pencil">
+				<p:menuitem value="Undo" url="#" icon="ui-icon-arrowreturnthick-1-w" />
+				<p:menuitem value="Redo" url="#" icon="ui-icon-arrowreturnthick-1-e" />
+			</p:submenu>
+
+			<p:submenu label="Tesouraria" icon="ui-icon-help">
+				<p:menuitem value="Contents" url="#" />
+				<p:submenu label="Search" icon="ui-icon-search">
+					<p:submenu label="Text">
+						<p:menuitem value="Workspace" url="#" />
+					</p:submenu>
+					<p:menuitem value="File" url="#" />
+				</p:submenu>
+			</p:submenu>
+
+			<p:submenu label="Acesso" icon="ui-icon-gear" rendered="#{menuTopoController.verificaPermissoes('ADMINISTRADOR')}">
+				<p:menuitem value="Trabalhador" action="#{trabalhadorController.init()}" icon="ui-icon ui-icon-volume-on" />
+				<p:menuitem value="Permissões" url="#" icon="ui-icon ui-icon-image" />
+				
+			</p:submenu>
+
+			<f:facet name="options">
+				<p:commandButton value="Sair" action="#{homeController.efetuarLogout()}"/>
+			</f:facet>
+		</p:menubar>
+	</h:form>
+</div>

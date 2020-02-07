@@ -1,0 +1,1346 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:b="http://bootsfaces.net/ui"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
+<f:view contentType="text/html" />
+
+<h:head>
+
+	<title>CENMC - CENTRO ESPÍRITA NAIR MONTEZ DE CASTRO</title>
+	<link rel="stylesheet"
+		href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href="https://fonts.googleapis.com/css?family=Montserrat"
+		rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Lato"
+		rel="stylesheet" type="text/css" />
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript"
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBm129gnRhDQ5IHiTB9PjihTgyQvPFQP5Q&amp;sensor=false"></script>
+	<script type="text/javascript"
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBm129gnRhDQ5IHiTB9PjihTgyQvPFQP5Q&amp;sensor=false"></script>
+	<script type="text/javascript">
+	
+	function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+} 	
+
+</script>
+</h:head>
+<style>
+body {
+	font: 400 15px Lato, sans-serif;
+	line-height: 1.8;
+	color: #818181;
+}
+
+h2 {
+	font-size: 24px;
+	text-transform: uppercase;
+	color: #303030;
+	font-weight: 600;
+	margin-bottom: 30px;
+}
+
+h4 {
+	font-size: 19px;
+	line-height: 1.375em;
+	color: #303030;
+	font-weight: 400;
+	margin-bottom: 30px;
+}
+
+h6 {
+	font-size: 11px;
+	line-height: 1.375em;
+	color: #303030;
+	font-weight: 100;
+	margin-bottom: 30px;
+}
+
+/* botão do chat */
+.chat {
+	display: scrolDashboard Template for Bootstrapl;
+	position: fixed !important;
+	float: right;
+	display: inline;
+	bottom: 6px;
+	right: 6px;
+	z-index: 9;
+}
+
+.jumbotron {
+	position: relative;
+	/*background-color: #C7E5C8*/;
+	background: url("img/nair.JPG") no-repeat;
+	color: #000;
+	font-family: Montserrat, sans-serif;
+	max-width: 100%;
+	height: 100vh;
+	background-size: 100% 100%;
+	margin: 0;
+}
+
+.container-fluid-top {
+	padding: 5px 5px;
+}
+
+.container-fluid {
+	padding: 60px 50px;
+}
+
+.socialNetwork {
+	color: #4B574C !important;
+	font-style: inherit;
+	text-align: right;
+}
+
+.space {
+	width: 100%;
+	height: 20px;
+	background-color: blue;
+}
+
+.alinharDireita {
+	float: right;
+}
+
+.font-white {
+	color: #FFF;
+}
+
+.bg-verde {
+	background-color: #97cea6;
+}
+
+.bg-grey {
+	background-color: #f6f6f6;
+}
+
+.bg-white {
+	background-color: #fff;
+}
+
+.bg-verdeEscuro {
+	background-color: #4B574C;
+}
+
+.bg-verdeMusgo {
+	background-color: #99A39A;
+}
+
+.bg-verdeForte {
+	background-color: #97AD98;
+}
+
+.logo-small {
+	color: #97cea6;
+	font-size: 50px;
+}
+
+.logo {
+	color: #97cea6;
+	font-size: 200px;
+}
+
+.textoBranco {
+	color: #fff;
+}
+
+.thumbnail {
+	padding: 0 0 15px 0;
+	border: none;
+	border-radius: 0;
+}
+
+.thumbnail img {
+	width: 100%;
+	height: 100%;
+	margin-bottom: 10px;
+}
+
+.carousel-control.right, .carousel-control.left {
+	background-image: none;
+	color: #97cea6;
+}
+
+.carousel-indicators li {
+	border-color: #97cea6;
+}
+
+.carousel-indicators li.active {
+	background-color: #97cea6;
+}
+
+#abreaspas {
+	color: #C3C3C3;
+	margin: 15px;
+}
+
+#fechaaspas {
+	color: #C3C3C3;
+	margin: 15px;
+}
+
+.item h4 {
+	font-size: 19px;
+	line-height: 1.375em;
+	font-weight: 400;
+	font-style: italic;
+	margin: 70px 0;
+}
+
+
+.item span {
+	font-style: normal;
+}
+
+.panel {
+	border: 1px solid #97cea6;
+	border-radius: 0 !important;
+	transition: box-shadow 0.5s;
+}
+
+.panel:hover {
+	box-shadow: 5px 0px 40px rgba(0, 0, 0, .2);
+}
+
+.panel-footer .btn:hover {
+	border: 1px solid #97cea6;
+	background-color: #fff !important;
+	color: #97cea6;
+}
+
+.panel-heading {
+	color: #fff !important;
+	background-color: #97cea6 !important;
+	padding: 25px;
+	border-bottom: 1px solid transparent;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+.panel-footer {
+	background-color: white !important;
+}
+
+.panel-footer h3 {
+	font-size: 32px;
+}
+
+.panel-footer h4 {
+	color: #aaa;
+	font-size: 14px;
+}
+
+.panel-footer .btn {
+	margin: 15px 0;
+	background-color: #97cea6;
+	color: #fff;
+}
+
+.navbar {
+	margin-bottom: 0;
+	background-color: #97cea6;
+	z-index: 1;
+	border: 0;
+	font-size: 12px !important;
+	font: bold;
+	line-height: 1.42857143 !important;
+	letter-spacing: 4px;
+	border-radius: 0;
+	font-family: Montserrat, sans-serif;
+	width: 70%;
+	display: inline-block;
+	float: none !important;
+}
+
+.navbar li a, .navbar .navbar-brand {
+	color: #4B574C !important;
+	font-style: normal;
+	font: bold;
+	text-align: center;
+}
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+	color: #97cea6 !important;
+	background-color: #4B574C !important;
+}
+
+.navbar-default .navbar-toggle {
+	border-color: transparent;
+}
+
+.fundoJumbotron{
+	width: 70%;
+	z-index: 3;
+	display: inline-block;
+	float: none !important;
+    background:#fff;
+   	opacity: 0.5;
+  	filter: alpha(opacity=50);
+}
+
+.sobPanel{
+z-index: 4;
+}
+
+
+
+.slideanim {
+	visibility: hidden;
+}
+
+.slide {
+	animation-name: slide;
+	-webkit-animation-name: slide;
+	animation-duration: 1s;
+	-webkit-animation-duration: 1s;
+	visibility: visible;
+}
+
+{
+box-sizing
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+index
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.xhtml
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+border-box
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+;
+}
+
+/* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+	background-color: #555;
+	color: white;
+	padding: 16px 20px;
+	border: none;
+	cursor: pointer;
+	opacity: 0.8;
+	position: fixed;
+	bottom: 23px;
+	right: 28px;
+	width: 280px;
+}
+
+/* The popup chat - hidden by default */
+.chat-popup {
+	display: none;
+	position: fixed;
+	bottom: 0;
+	right: 15px; /#
+	border: 3px solid #f1f1f1;
+	z-index: 9;
+}
+
+/* The popup chat - hidden by default */
+.form-popup {
+	display: none;
+	position: fixed;
+	bottom: 0;
+	right: 15px;
+	border: 3px solid #f1f1f1;
+	z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+	max-width: 300px;
+	padding: 10px;
+	background-color: white;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+	width: 100%;
+	padding: 15px;
+	margin: 5px 0 22px 0;
+	border: none;
+	background: #f1f1f1;
+	resize: none;
+	min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+	background-color: #ddd;
+	outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+	background-color: #4CAF50;
+	color: white;
+	padding: 16px 20px;
+	border: none; /#
+	cursor: pointer;
+	width: 100%;
+	margin-bottom: 10px;
+	opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+	background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+	opacity: 1;
+}
+
+.modal .modal-dialog {
+	width: 75%;
+}
+
+@
+keyframes slide { 0% {
+	opacity: 0;
+	transform: translateY(70%);
+}
+
+100%
+{
+opacity
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1;
+transform
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:translateY
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(0%);
+}
+}
+@
+-webkit-keyframes slide { 0% {
+	opacity: 0;
+	-webkit-transform: translateY(70%);
+}
+
+100%
+{
+opacity
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1;
+-webkit-transform
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:translateY
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(0%);
+}
+}
+@media screen and (max-width: 768px) {
+	.col-sm-4 {
+		text-align: center;
+		margin: 25px 0;
+	}
+	.btn-lg {
+		width: 100%;
+		margin-bottom: 35px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.logo {
+		font-size: 150px;
+	}
+}
+</style>
+
+<h:body id="topo" data-spy="scroll" data-target=".navbar"
+	data-offset="60">
+
+
+
+	<div class="jumbotron text-center">
+		<!-- <div class="container-fluid-top">
+			<b:pillLinks style="padding-left: 15%;">
+				<b:navLink href="https://www.facebook.com/cenmc/" target="_blank"
+					value=" " content-class="fa fa-facebook-square socialNetwork"
+					iconAlign="right" tooltip="Página do CENMC no Facebook" />
+				<b:navLink href="https://www.instagram.com/?hl=en" value=" "
+					target="_blank" content-class="fa fa-instagram socialNetwork"
+					tooltip="Página do CENMC no Instagram"></b:navLink>
+			</b:pillLinks>
+		</div> -->
+
+		<b:navBar brand="CENMC" brandHref="#" inverse="true">
+			<b:navbarLinks>
+				<b:navLink value="A CASA" href="#casa"></b:navLink>
+				<b:navLink value="JORNAL" href="#jornal"></b:navLink>				
+				<b:navLink value="PROGRAMAÇÃO" href="#programacao"></b:navLink>
+				<b:navLink value="GALERIA" href="#galeria"></b:navLink>				
+				<b:navLink value="LOCALIZAÇÃO" href="#localizacao"></b:navLink>
+				<b:navLink value="FALE CONOSCO" href="#contato"></b:navLink>
+			</b:navbarLinks>
+		</b:navBar>
+
+	</div>
+	
+	<div id="jornal" class="container-fluid bg-grey">
+		<div class="row">
+			<div class="col-sm-8">
+			<span class="glyphicon glyphicon-cloud-download logo"></span>
+			</div>
+			<div class="col-sm-4">
+				<h2>JORNAL</h2>
+				<br />
+				<p>Faça download do nosso jornal "A CARAVANA", sua edição é mensal</p>
+				<br />
+				<h:form>
+						<b:commandButton value=" Download" ajax="false"
+							class="glyphicon glyphicon-download btn btn-danger sobPanel">
+							<p:fileDownload value="#{jornalController.arquivo}" />
+						</b:commandButton>
+					</h:form>
+			</div>
+		</div>
+	</div>
+
+	<div id="casa" class="container-fluid bg-white">
+		<div class="row">
+			<div class="col-sm-8">
+				<h2>A CASA</h2>
+				<br />
+				<p>Fundado em 8 de abril de 1954, o Centro Espírita Nair Montez de Castro (CENMC) fica na Rua Vilela Tavares, 173, no Méier, bairro da zona norte carioca. Nosso Celeiro de Luz, como carinhosamente nos referimos a ele, funciona na casa que serviu de lar ao casal Pedro Celestino de Castro e Nair Montez de Castro.<br /><br />
+
+Senhor Pedro era ferroviário e espiritualista. Dona Nair era professora e católica praticante. Eles fizeram um acordo: se o Senhor Pedro desencarnasse primeiro, Dona Nair fundaria na casa uma escola. Caso ocorresse o contrário, ele fundaria um centro.<br /><br />
+
+Dona Nair foi quem antes retornou ao Plano Espiritual. Após a desencarnação da esposa, Senhor Pedro, um espírito de escol, estabeleceu o culto do Evangelho no Lar, abrindo as portas de sua casa a todos que quisessem participar. Foi o início do então Centro Espiritualista Nair Montez de Castro. Um pouco mais tarde, em 30 de abril de 1957, ele fundou também a Escola Mestra Tereza de Jesus, que funcionou até há alguns anos.<br /><br />
+
+Em 1963, por iniciativa do então presidente Eugênio Aló, a Casa passou a se chamar Centro Espírita Nair Montez de Castro. No Plano Espiritual, além de aqui estar situado o Hospital Maria de Nazaré, estamos ligados à colônia Alvorada Nova.<br /><br />
+
+Atualmente, o CENMC oferece reuniões públicas cinco vezes por semana. Há também grupos de estudo da Doutrina Espírita, Evangelização Infantil e Mocidade Espírita. Há atendimento fraterno, oferecido nos dias de reunião pública, e reuniões de tratamento espiritual.<br /><br />
+
+O atendimento da Casa também abrange atividades assistenciais. Há equipes voluntárias dedicadas à confecção e distribuição de enxovais a gestantes previamente cadastradas, arrecadação e entrega de cestas básicas a famílias também cadastradas, leite em pó para crianças de até três anos de idade, distribuição de itens de vestuário seminovos e também alimentação, inclusive para irmãos em situação de rua.<br /><br />
+
+Venha nos visitar e conhecer o trabalho do CENMC!
+</p>
+				<br />
+
+			</div>
+			<div class="col-sm-4">
+				<span class="glyphicon glyphicon-home logo"></span>
+			</div>
+		</div>
+	</div>
+
+	<div id="programacao" class="container-fluid bg-grey">
+		<div class="row">
+			<div class="col-sm-4">
+				<span class="glyphicon glyphicon-calendar logo"></span>
+			</div>
+			<div class="col-sm-8">
+				<h2>PROGRAMAÇÃO</h2>
+				<br />
+				<h4>Conheça as atividades do Centro Espírita Nair Montez de
+					Castro</h4>
+				<br /> <br />
+				<h:form>
+					<b:row>
+						<b:column span="3">
+							<b:button value="Ver mais" look="default"
+								class="btn btn-default btn-lg"
+								onclick="$('.modalAtividades').modal();rpWidgetVar.DataTable().responsive.recalc();"
+								size="md" />
+						</b:column>
+					</b:row>
+					<b:row>
+						<b:column span="3">
+							<b:modal id="mreuniao" title="Programação"
+								styleClass="modalAtividades" style="top: 70px;">
+								<b:tabView
+									contentStyle="border-right: 1px solid #ddd;border-left: 1px solid #ddd;border-bottom: 1px solid #ddd;padding:10px">
+									<!-- <b:tab title="Reuniões Públicas">
+										<b:container fluid="true">
+											<b:dataTable
+												value="#{atividadeController.buscarAtividadePorMesAno()}"
+												var="atividade" page-length="5" page-length-menu="5,10,20"
+												widgetVar="rpWidgetVar" responsive="true"
+												scroll-horizontally="true">
+												<f:facet name="header">
+													<tr colspan="8" rowspan="1">
+														<th colspan="8" rowspan="1">REUNIÃO PÚBLICA</th>
+
+													</tr>
+													<tr colspan="4" rowspan="1">
+														<th colspan="8" rowspan="1">Programação de reuniões
+															públicas</th>
+
+													</tr>
+													<tr>
+														<th>TEMA</th>
+														<th>DIA</th>
+														<th>HORA</th>
+														<th style="widht: 200px">DIA DA SEMANA</th>
+													</tr>
+												</f:facet>
+												<b:dataTableColumn value="#{atividade.tema}" />
+												<b:dataTableColumn value="#{atividade.data}"></b:dataTableColumn>
+												<b:dataTableColumn value="#{atividade.hora}"></b:dataTableColumn>
+												<b:dataTableColumn value="#{atividade.diasDaSemana}"
+													order="asc" />
+											</b:dataTable>
+										</b:container>
+
+									</b:tab> -->
+									<b:tab title="Coordenação de Assuntos Doutrinários">
+										<b:panel>
+											<f:facet name="heading">
+												<i class="glyphicon glyphicon-th-list"
+													style="padding-right: 20px; color: #303030;" />
+												<h:outputText value="LISTA DE ATIVIDADES"
+													style="color: #303030;" />
+											</f:facet>
+											<img src="img/codestudos.JPG" width="100%" height="100%" />
+										</b:panel>
+
+									</b:tab>
+									<b:tab title="Coordenação de Atividades Assistênciais">
+										<b:panel>
+											<f:facet name="heading">
+												<i class="glyphicon glyphicon-th-list"
+													style="padding-right: 20px; color: #303030;" />
+												<h:outputText value="LISTA DE ATIVIDADES"
+													style="color: #303030;" />
+											</f:facet>
+											<img src="img/atividadesassistenciais.JPG" width="100%"
+												height="100%" />
+										</b:panel>
+
+									</b:tab>
+								</b:tabView>
+
+
+							</b:modal>
+						</b:column>
+					</b:row>
+				</h:form>
+
+			</div>
+
+		</div>
+	</div>
+
+	<!-- Container (Services Section) -->
+
+	<!-- 
+<div id="services" class="container-fluid text-center">
+  <h2>ATIVIDADES</h2>
+  <h4>What we offer</h4>
+  <br/>
+  <div class="row ">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-off logo-small"></span>
+      <h4>Livraria</h4>
+      <p>Grande acervo espirita</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-heart logo-small"></span>
+      <h4>Biblioteca</h4>
+      <p>Pegue um livro conosco..</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-lock logo-small"></span>
+      <h4>Campanha do kilo</h4>
+      <p>contribua..</p>#noticias
+    </div>
+  </div>
+  <br/><br/>
+  <div class="row ">
+    <div class="col-sm-4">●●●●●●
+      <span class="glyphicon glyphicon-leaf logo-small"></span>
+      <h4>Bazar</h4>
+      <p>Roupas e etc..</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-certificate logo-small"></span>
+      <h4>Cantina</h4>
+      <p>temos sempre algo gostoso.</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-wrench logo-small"></span>
+      <h4 style="color:#303030;">Trabalhador da Casa</h4>
+      <p>junte-se aos trabalhodores da casa de pedro e nair..</p>
+    </div>
+  </div>
+</div>
+ -->
+
+	<!-- Container (Portfolio Section) -->
+	<div id="galeria" class="container-fluid text-center bg-white">
+		<h2>GALERIA</h2>
+		<br />
+		<h4>Conheça alguns ambientes da nossa casa</h4>
+		<div class="row text-center ">
+			<div class="col-sm-4">
+				<div class="img-thumbnail">
+					<img src="img/entrada.jpeg" alt="Entrada do Centro" width="400"
+						height="300" />
+
+					<p>
+						<strong>Entrada</strong>
+					</p>
+					<p>Seja bem-vindo ao CENMC!</p>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="img-thumbnail">
+					<img src="img/acervo.jpeg"
+						alt="Livraria do Centro Espírita Nair Montez de Castro"
+						width="400" height="300" />
+					<p>
+						<strong>Biblioteca Pedro Celestino de Castro</strong>
+					</p>
+					<p>Pegue um livro emprestado ou aproveite para ler aqui</p>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="img-thumbnail">
+					<img src="img/jardim.jpg" alt="Nosso Jardim" width="400"
+						height="300" />
+					<p>
+						<strong>Jardim florido o ano todo</strong>
+					</p>
+					<p>Aproveite esse espaço para uma conversa agradável</p>
+				</div>
+			</div>
+
+			<div class="col-sm-4">
+				<div class="img-thumbnail">
+					<img src="img/biblioteca.jpeg" alt="Livraria do centro" width="400"
+						height="300" />
+					<p>
+						<strong>Livraria Eugênio Aló</strong>
+					</p>
+					<p>Encontre ou encomende sua próxima leitura espírita</p>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="img-thumbnail">
+					<img src="img/frente.jpeg" alt="Frente da casa" width="400"
+						height="300" />
+					<p>
+						<strong>Continuação do nosso Jardim</strong>
+					</p>
+					<p>Essa é a frente da casa.</p>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="img-thumbnail">
+					<img src="img/cantina.jpg" alt="Entrada das salas"
+						width="400" height="300" />
+					<p>
+						<strong>Cantina, Bazar e Brechó</strong>
+					</p>
+					<p>Neste espaço, você poderá lanchar e confraternizar</p>
+				</div>
+			</div>
+
+
+			<div class="col-sm-4">
+				<div class="img-thumbnail">
+					<img src="img/saladeestudos.jpg" alt="Entrada do Centro"
+						width="400" height="300" />
+
+					<p>
+						<strong>Salas de Estudos</strong>
+					</p>
+					<p>Consulte os estudos disponíveis e venha aprofundar <br />seus conhecimentos da Doutrina Espírita</p>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="img-thumbnail">
+					<img src="img/saladepasse.jpg"
+						alt="Livraria do Centro Espírita Nair Montez de Castro"
+						width="400" height="300" />
+					<p>
+						<strong>Sala de Passe Teresa d'Ávila</strong>
+					</p>
+					<p>Após a reunião pública, você será encaminhado<br /> ao passe e à água fluidificada</p>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="img-thumbnail">
+					<img src="img/salao.jpg" alt="Nosso Jardim" width="400"
+						height="300" />
+					<p>
+						<strong>Salão de Reuniões Públicas</strong>
+					</p>
+					<p>Sinta a harmonia do ambiente destinado às reuniões públicas</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br />
+	<!--<div id="noticias" class="container-fluid  text-center bg-grey">
+
+
+		<h2>NOTÍCIAS</h2>
+		<div class="row">
+
+			<b:carousel id="carousel" style="width: 100%; height: 300px;">
+				<c:forEach items="#{noticiaController.exibeNoticia()}" var="noticia">
+					<b:carouselItem>
+
+						<br />
+						<p>
+							<span><h:outputText
+									style="color: #C3C3C3;margin: 0px; padding:0px;font: 400 25px Lato, sans-serif;font-weight:bold;"
+									value="#{noticia.titulo}" /></span>
+						</p>
+
+
+						<p>
+							<span><b:iconAwesome style="color: #C3C3C3;margin: 15px;"
+									value="quote-left" solid="true" size="2x" /> <h:outputText
+									style="color: #C3C3C3;margin: 0px; padding:0px;font: 400 18px Lato, sans-serif;"
+									value="#{noticia.texto}" /> <b:iconAwesome
+									style="color: #C3C3C3;margin: 15px;" value="quote-right"
+									solid="true" size="2x" /></span>
+						</p>
+						<br />
+
+						<span style="color: #9BCD9B; margin: 0px; font-weight: bold;">Crianda
+							em :<h:outputText
+								style="color: #9BCD9B;margin: 0px;font-weight:bold;"
+								value="#{noticia.data}">
+								<f:convertDateTime type="date" pattern="dd/MM/yyyy" />
+							</h:outputText>
+						</span>
+
+					</b:carouselItem>
+				</c:forEach>
+
+			</b:carousel>
+		</div>
+	</div>
+
+	
+	
+<div id="pricing" class="container-fluid">
+  <div class="text-center">
+    <h2>DOAÇÕES</h2>
+    <h4>Veja as doações para casa</h4>
+  </div>
+  <div class="row ">
+    <div class="col-sm-4 col-xs-12"><li><h:form>●●●●●●
+						<b:panelGrid columns="2">
+							<b:kebab content-disabled="false" id="kebabId">
+								<b:listLinks>
+									<b:navLink value="Action" href="#"></b:navLink>
+									<b:navLink value="Another action" href="#"></b:navLink>
+									<b:navLink value="Something else here" href="#"></b:navLink>
+									<b:navLink></b:navLink>
+									<b:navLink header="Nav header"></b:navLink>
+									<b:navLink value="Separated link" href="#"></b:navLink>
+									<b:navLink value="One more separated link" href="#"></b:navLink>
+								</b:listLinks>
+							</b:kebab>
+							
+						</b:panelGrid>
+					</h:form></li>
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Semana</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>20</strong> Arroz</p>
+          <p><strong>15</strong> Feijão</p>
+          <p><strong>5</strong> Açúcar</p>
+          <p><strong>2</strong> Óleo</p>
+          <p><strong>Falta</strong> Macarrão</p>
+        </div>
+        <div class="panel-footer">
+          <h3>$19</h3>
+          <h4>por mês</h4>
+          <button class="btn btn-lg">Ver</button>
+        </div>https://www.lciceris.com.br/enviar-um-formulario-de-contato-por-e-mail-php/
+      </div>      
+    </div>     
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Mês</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>50</strong> Arroz</p>
+          <p><strong>25</strong> Feijão</p>
+          <p><strong>10</strong> Açúcar</p>
+          <p><strong>5</strong> Óleo</p>
+          <p><strong>Falta</strong> Macarrão</p>
+        </div>
+        <div class="panel-footer">
+          <h3>$29</h3>
+          <h4>Por mês</h4>
+          <button class="btn btn-lg">Ver</button>
+        </div>
+      </div>      
+    </div>       
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Ano</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>100</strong> Arroz</p>
+          <p><strong>50</strong> Feijão</p>
+          <p><strong>25</strong> Açúcar</p>
+          <p><strong>10</strong> Óleo</p>
+          <p><strong>Falta</strong> Macarrão</p>
+        </div>
+        <div class="panel-footer">
+          <h3>$49</h3>
+          <h4>Por mês</h4>
+          <button class="btn btn-lg">Ver</button>
+        </div>
+      </div>      
+    </div>    
+  </div>#myPage
+</div>
+-->
+	<div id="localizacao" class="container-fluid bg-grey">
+		<div class="text-center">
+			<h2>LOCALIZAÇÃO</h2>
+			<h4>Veja no mapa onde fica o CENMC</h4>
+		</div>
+		<b:openStreetMap width="100%" height="500px"
+			center="-22.9085287,-43.2870305" marker="-22.9085287,-43.2870305"
+			popupMsg="Centro Espírita Nair montez de Castro." zoom="16"
+			urlTemplate="https://tileserver.memomaps.de/tilegen/{z}/{x}/{y}.png" />
+
+	</div>
+
+	<!-- Container (Contact Section) -->
+	<div id="contato" class="container-fluid bg-white">
+		<h:form>
+			<b:growl id="growl" globalOnly="true" showDetail="true"
+				severity="info,warn" />
+			<h2 class="text-center">FALE CONOSCO</h2>
+			<div class="row">
+				<div class="col-sm-5">
+					<p>Entre em contato conosco.</p>
+					<p>
+						<span class="glyphicon glyphicon-map-marker"></span> Rua Vilela
+						Tavares 173, Rio de Janeiro - RJ
+					</p>
+					<p>
+						<span class="glyphicon glyphicon-phone"></span> +55 21 2595-5462
+					</p>
+					<p>
+						<span class="glyphicon glyphicon-envelope"></span>
+						centroespiritanairmontezdecastro@uol.com.br
+					</p>
+				</div>
+				<div class="col-sm-7 ">
+					<div class="row">
+						<div class="col-sm-6 form-group">
+							<b:inputText placeholder="Nome" typeahead="true"
+								value="#{homeController.contato.nome}" />
+						</div>
+						<div class="col-sm-6 form-group">
+							<b:inputText placeholder="E-mail" typeahead="true"
+								value="#{homeController.contato.email}" />
+						</div>
+
+					</div>
+
+					<b:selectOneMenu value="#{homeController.contato.assunto}">
+						<f:selectItem itemLabel="Escolha um Assunto" itemValue="" />
+						<f:selectItem itemLabel="Dúvidas" itemValue="Dúvidas" />
+						<f:selectItem itemLabel="Doações" itemValue="Doações" />
+						<f:selectItem itemLabel="Ajuda" itemValue="Ajuda" />
+						<f:selectItem itemLabel="Outros" itemValue="Outros" />
+					</b:selectOneMenu>
+
+					<b:inputTextarea placeholder="Comentários"
+						value="#{homeController.contato.comentario}" />
+
+					<div class="row">
+						<div class="col-sm-12 form-group">
+							<b:commandButton value="Enviar" ajax="false"
+								action="#{homeController.Enviar()}" update="growl"
+								style="width:80px" />
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</h:form>
+	</div>
+
+	<div class="chat">
+		<a href="#topo"> <img src="img/btnseta.png" width="40" height="40"
+			alt="topo" />
+		</a>
+	</div>
+
+
+	<footer class="container-fluid text-center bg-verdeEscuro textoBranco">
+	<a href="#topo" title="Ir Para o Início"> <span
+		class="glyphicon glyphicon-chevron-up"></span>
+	</a>
+	<p>Centro Espírita Nair Montez de Castro desde 1954</p>
+	</footer>
+
+
+
+</h:body>
+</html>

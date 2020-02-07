@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:p="http://primefaces.org/ui">
+<f:view contentType="text/html" />
+
+<h:head>
+
+	<title>CENMC - CENTRO ESPÍRITA NAIR MONTEZ DE CASTRO</title>
+
+
+ <style type="text/css">
+body {
+	font: 400 15px Lato, sans-serif;
+	line-height: 1.8;
+	color: #818181;
+	background: #C7E5C8;
+}
+
+.ui-layout-north {
+	z-index: 20 !important;
+	overflow: visible !important;
+}
+
+.ui-layout-north .ui-layout-unit-content {
+	overflow: visible !important;
+}
+
+    .ui-datalist .ui-datalist-content {
+        border:0 none
+    }
+     
+    .ui-datalist ul {
+        padding:0px 10px 0 20px;
+        margin: 5px 0;
+    }
+     
+    .label, .value {
+        vertical-align: top
+    }
+ 
+    .output {
+        font-weight: bold
+    }
+     
+    .ui-selectmanymenu {
+        width: 175px;
+    }
+    /*primefaces autocomplete*/
+    
+     .ui-datalist .ui-datalist-content {
+        border:0 none
+    }
+     
+    .ui-datalist ul {
+        padding: 0px 10px 0 20px;
+        margin: 5px 0;
+    }
+     
+    .value {
+        font-weight: bold;
+    }
+     
+    .ui-autocomplete-itemtip {
+        -moz-box-sizing: content-box;
+        -webkit-box-sizing: content-box;
+        box-sizing: content-box;
+    
+    }
+    /*fim autocomplete*/
+</style>
+
+
+</h:head>
+
+<h:body>
+
+	<p:layout fullPage="true">
+
+		<p:layoutUnit position="north" size="100"
+			header="CENMC - Centro Espírita Nair Montez de Castro">
+			<ui:include src="/view/sistema/menu_topo.xhtml"></ui:include>
+
+		</p:layoutUnit>
+
+		<p:layoutUnit position="south" size="100">
+			<ui:include src="/view/sistema/menu_rodape.xhtml"></ui:include>
+		</p:layoutUnit>
+
+		<p:layoutUnit position="west" size="315" header="#{homeController.usuarioLogado.nome}">
+			<ui:include src="/view/sistema/menu_esquerdo.xhtml"></ui:include>
+		</p:layoutUnit>
+
+		<p:layoutUnit position="east" size="250
+		" header="Eventos">
+			<ui:include src="/view/sistema/menu_eventos.xhtml"></ui:include>
+		</p:layoutUnit>
+
+		<p:layoutUnit position="center">
+		<ui:insert name="conteudo" />
+		</p:layoutUnit>
+
+	</p:layout>
+
+
+</h:body>
+</html>
